@@ -4,7 +4,7 @@ from odoo import models, fields, api
 
 class student(models.Model):
      _name = 'school.student'
-     _description = 'Students of school'
+     _description = 'Students of school'    sdf
 
      name = fields.Char()
      year = fields.Integer()

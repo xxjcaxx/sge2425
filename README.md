@@ -12,4 +12,4 @@ Al aconseguir els criteris de Done de cada spring, es farà un Pull Request que 
 
 L'organització de tot es farà resolent Issues en un Project de Github`.
 
-Es valorarà acabar els Sprintsen temps i forma, aixì com la quantitat d'ells.
+Es valorarà acabar els Sprintsen temps i forma, aixì com la quantitat d'ells. <3

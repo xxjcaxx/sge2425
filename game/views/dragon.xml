@@ -57,7 +57,7 @@
 
 <!-- Este es el que hay que tocar-->
 
-    <menuitem name="Dragon" id="game.menu_dragon" parent="game.menu_root"
+    <menuitem name="Dragon" id="game.menu_dragon" parent="game.menu_1"
               action="game.dragon_action_window"/>
 
   </data>

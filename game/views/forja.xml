@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+
+    <record model="ir.actions.act_window" id="game.action_forja_window">
+      <field name="name">lol player window</field>
+      <field name="res_model">lol.player</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Forja" id="game.forja_list" parent="game.forja"
+              action="game.action_forja_window"/>
+
+    </data>
+</odoo>

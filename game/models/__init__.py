@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
 
 
-from . import models, maps, object_type,  dragon
+from . import models, characters, maps, object_type,  dragon
 

@@ -18,24 +18,8 @@
     <!-- actions opening views on models -->
 
 
-    <!-- server action to the one above -->
-<!--
-    <record model="ir.actions.server" id="game.action_server">
-      <field name="name">game server</field>
-      <field name="model_id" ref="model_game_game"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": model._name,
-        }
-      </field>
-    </record>
--->
 
 
-    <!-- menu categories -->
 
 
     <menuitem name="Game" id="game.menu_root"/>
@@ -44,9 +28,6 @@
 
     <menuitem name="Pantalla Inicio" id="game.menu_1" parent="game.menu_root"/>
 
-
-
- 
 
   </data>
 </odoo>

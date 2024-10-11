@@ -9,6 +9,7 @@
             <field name="name"/>
             <field name="timeout"/>
             <field name="expGained"/>
+            <field name="type"/>
             <field name="avatar" widget="image"/>
         </tree>
       </field>
@@ -26,6 +27,7 @@
                     <field name="name"/>
                     <field name="timeout"/>
                     <field name="expGained"/>
+                    <field name="type"/>
                     <field name="avatar" widget="image"/>
                 </group>
             </sheet>

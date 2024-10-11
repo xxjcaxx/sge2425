@@ -22,10 +22,10 @@ Long description of module's purpose
 
     # always loaded
     'data': [
-        # SECURITY DESCOMENTADO
          'security/ir.model.access.csv',
         'views/views.xml',
         'views/dragon.xml',
+    'views/maps.xml',
         'views/templates.xml',
         'views/object_type.xml'
     ],

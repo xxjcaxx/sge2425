@@ -16,7 +16,11 @@
 -->
 
     <!-- actions opening views on models -->
-
+    <record model="ir.actions.act_window" id="game.action_maps">
+      <field name="name">game maps</field>
+      <field name="res_model">game.maps</field>
+      <field name="view_mode">tree,form</field>
+    </record>
 
     <!-- server action to the one above -->
 <!--
@@ -34,19 +38,17 @@
     </record>
 -->
 
-
+    <!-- Top menu item -->
+<!--
+    <menuitem name="game" id="game.menu_root"/>
+-->
     <!-- menu categories -->
-
-
-    <menuitem name="Game" id="game.menu_root"/>
-
-    <!-- menu categories -->
-
-    <menuitem name="Pantalla Inicio" id="game.menu_1" parent="game.menu_root"/>
-
-
-
- 
-
+<!--
+    <menuitem name="Menu 1" id="game.menu_1" parent="game.menu_root"/>
+    <menuitem name="Menu 2" id="game.menu_2" parent="game.menu_root"/>
+-->
+    <!-- actions -->
+    <menuitem name="Game Maps" id="game.menu_maps" parent="game.menu_1"
+              action="game.action_maps"/>
   </data>
 </odoo>

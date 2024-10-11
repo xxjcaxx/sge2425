@@ -1,14 +1,9 @@
 
-
-from odoo import models, fields, api
+from odoo import models, fields, api  # Aquí se importa 'models'
 
 class forja(models.Model):
-        _name = "forja"
-        _description = "roba madrid"
+    _name = 'game.game'
+    _description = 'game.game'
 
-        name = fields.Char()
-        type = fields.Char()
-        level = fields.Integer()
-
-    
-    
+    name = fields.Char()
+    description = fields.Text()

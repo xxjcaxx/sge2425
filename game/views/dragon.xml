@@ -36,7 +36,7 @@
     <!-- actions opening views on models -->
 
     <record model="ir.actions.act_window" id="game.dragon_action_window">
-      <field name="name">game dragon window</field>
+      <field name="name">Dragon</field>
       <field name="res_model">game.dragon</field>
       <field name="view_mode">tree,form</field>
     </record>

@@ -26,6 +26,7 @@ Long description of module's purpose
         'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
+        'views/object_type.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

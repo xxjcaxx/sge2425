@@ -27,7 +27,8 @@ Long description of module's purpose
         'views/views.xml',
         'views/dragon.xml',
         'views/templates.xml',
-        'views/object_type.xml'
+        'views/object_type.xml',
+        'views/model_player.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

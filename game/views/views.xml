@@ -41,14 +41,13 @@
 -->
 
     <!-- Top menu item -->
-<!--
-    <menuitem name="game" id="game.menu_root"/>
--->
+
+    <menuitem name="Game" id="game.menu_root"/>
+
     <!-- menu categories -->
-<!--
-    <menuitem name="Menu 1" id="game.menu_1" parent="game.menu_root"/>
-    <menuitem name="Menu 2" id="game.menu_2" parent="game.menu_root"/>
--->
+
+    <menuitem name="Pantalla Inicio" id="game.menu_1" parent="game.menu_root"/>
+
     <!-- actions -->
 <!--
     <menuitem name="List" id="game.menu_1_list" parent="game.menu_1"

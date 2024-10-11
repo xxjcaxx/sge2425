@@ -1,3 +1,4 @@
 # -*- coding: utf-8 -*-
 
-from . import models, dragon
+from . import models, object_type,  dragon
+

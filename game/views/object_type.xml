@@ -1,0 +1,29 @@
+<odoo>
+  <data>
+ 
+
+    <!-- Acciones -->
+
+    <record model="ir.actions.act_window" id="game.action_window">
+      <field name="name">Tipos de objeto</field>
+      <field name="res_model">game.object_type</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- Top menu item -->
+
+    <menuitem name="game" id="game.menu_root"/>
+
+    <!-- Sub-menú -->
+
+    <menuitem name="Menu 1" id="game.menu_1" parent="game.menu_root"/>
+
+    <!-- Acciones -->
+
+    <menuitem name="List" id="game.menu_1_list" parent="game.menu_1"
+              action="game.action_window"/>
+ 
+
+  </data>
+</odoo>

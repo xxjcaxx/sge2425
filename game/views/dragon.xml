@@ -1,6 +1,19 @@
 <odoo>
   <data>
     <!-- explicit list view definition -->
+ <record model="ir.ui.view" id="game.dragon_list">
+      <field name="name">game dragon list</field>
+      <field name="model">game.dragon</field>
+      <field name="arch" type="xml">
+        <tree>
+            <field name="name"/>
+            <field name="timeout"/>
+            <field name="expGained"/>
+            <field name="type"/>
+            <field name="avatar" widget="image"/>
+        </tree>
+      </field>
+    </record>
 
 
 
@@ -12,6 +25,10 @@
             <sheet>
                 <group>
                     <field name="name"/>
+                    <field name="timeout"/>
+                    <field name="expGained"/>
+                    <field name="type"/>
+                    <field name="avatar" widget="image"/>
                 </group>
             </sheet>
         </form>
@@ -21,7 +38,7 @@
     <!-- actions opening views on models -->
 
     <record model="ir.actions.act_window" id="game.dragon_action_window">
-      <field name="name">game dragon window</field>
+      <field name="name">Dragon</field>
       <field name="res_model">game.dragon</field>
       <field name="view_mode">tree,form</field>
     </record>

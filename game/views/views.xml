@@ -1,40 +1,33 @@
 <odoo>
   <data>
-
-    <!-- actions opening views on models -->
-    <record model="ir.actions.act_window" id="game.action_window">
-      <field name="name">game window</field>
-      <field name="res_model">game.game</field>
-      <field name="view_mode">tree,form</field>
-    </record>
-
-    <!-- server action to the one above -->
+    <!-- explicit list view definition -->
 <!--
-    <record model="ir.actions.server" id="game.action_server">
-      <field name="name">game server</field>
-      <field name="model_id" ref="model_game_game"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": model._name,
-        }
+    <record model="ir.ui.view" id="game.list">
+      <field name="name">game list</field>
+      <field name="model">game.game</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
       </field>
     </record>
 -->
 
-    <!-- Top menu item -->
+    <!-- actions opening views on models -->
 
-    <menuitem name="game" id="game.menu_root"/>
+
+
+
+
+
+    <menuitem name="Game" id="game.menu_root"/>
 
     <!-- menu categories -->
 
-    <menuitem name="Menu 1" id="game.menu_1" parent="game.menu_root"/>
+    <menuitem name="Pantalla Inicio" id="game.menu_1" parent="game.menu_root"/>
 
-    <!-- actions -->
-    <menuitem name="List" id="game.menu_1_list" parent="game.menu_1"
-              action="game.action_window"/>
-  
+
   </data>
 </odoo>

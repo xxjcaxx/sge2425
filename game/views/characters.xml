@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+
+        <record model="ir.actions.act_window" id="game.action_characters_window">
+            <field name="name">game window</field>
+            <field name="res_model">game.characters</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <menuitem name="Characters" id="game.menu_1_list" parent="game.menu_1"
+                  action="game.action_characters_window"/>
+    </data>
+
+</odoo>

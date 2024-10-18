@@ -1,15 +1,83 @@
 <odoo>
-    <data>
+  <data>
+    <!-- explicit list view definition -->
+ <record model="ir.ui.view" id="game.character_list">
+      <field name="name">game character list</field>
+      <field name="model">game.character</field>
+      <field name="arch" type="xml">
+        <tree>
+            <field name="name"/>
+            <field name="level"/>
+            <field name="exp"/>
+            <field name="stats"/>
+            <field name="objects"/>
+            <field name="picture" widget="image"/>
+        </tree>
+      </field>
+    </record>
 
-        <record model="ir.actions.act_window" id="game.action_characters_window">
-            <field name="name">game window</field>
-            <field name="res_model">game.characters</field>
-            <field name="view_mode">tree,form</field>
-        </record>
 
 
-        <menuitem name="Characters" id="game.menu_1_list" parent="game.menu_1"
-                  action="game.action_characters_window"/>
-    </data>
+    <record model="ir.ui.view" id="game.character_form">
+      <field name="name">game character form</field>
+      <field name="model">game.character</field>
+      <field name="arch" type="xml">
+        <form>
+            <sheet>
+                <group>
+                    <field name="name"/>
+                    <field name="level"/>
+                    <field name="exp"/>
+                    <field name="stats"/>
+                    <field name="objects"/>
+                    <field name="picture" widget="image"/>
+                </group>
+            </sheet>
+        </form>
+      </field>
+    </record>
 
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="game.characters_action_window">
+      <field name="name">Characters</field>
+      <field name="res_model">game.characters</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="game.action_server">
+      <field name="name">game server</field>
+      <field name="model_id" ref="model_game_game"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="game" id="game.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="game.menu_1" parent="game.menu_root"/>
+    <menuitem name="Menu 2" id="game.menu_2" parent="game.menu_root"/>
+-->
+    <!-- actions -->
+
+
+<!-- Este es el que hay que tocar-->
+
+    <menuitem name="Characters" id="game.menu_characters" parent="game.menu_1"
+              action="game.characters_action_window"/>
+
+  </data>
 </odoo>

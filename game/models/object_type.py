@@ -5,17 +5,17 @@ class object_type(models.Model):
     _description = 'Descripción de los tipos de objetos.'
 
 
-    Clase = fields.Selection([
+    clase = fields.Selection([
           ('1','Ligera'),
           ('2','Media'),
           ('3','Pesada')])
-    Personaje = fields.Text(string='Personaje')
-    Pasiva = fields.Text()
-    Activa = fields.Text()
-    Stats = fields.Text()
-    Calidad = fields.Selection([
+    personaje = fields.Text(string='Personaje')
+    pasiva = fields.Text()
+    activa = fields.Text()
+    stats = fields.Text()
+    calidad = fields.Selection([
           ('1','Básico'),
           ('2','Épico'),
           ('3','Legendario'),
           ('4','Mítico')])
-    Imagen = fields.Image()
+    imagen = fields.Image()

@@ -7,6 +7,7 @@ class characters(models.Model):
     _name = 'game.characters'
     _description = 'game.characters'
 
+    player = fields.Many2one('game.model_player', string='Players')
     name = fields.Char()
     level = fields.Integer()
     exp = fields.Integer()

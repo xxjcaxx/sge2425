@@ -4,9 +4,9 @@
 
     <!-- Acciones -->
 
-    <record model="ir.actions.act_window" id="game.action_object_window">
-      <field name="name">Tipos de objeto</field>
-      <field name="res_model">game.object_type</field>
+    <record model="ir.actions.act_window" id="game.action_player_window">
+      <field name="name">Usuarios</field>
+      <field name="res_model">game.model_player</field>
       <field name="view_mode">tree,form</field>
     </record>
 
@@ -21,8 +21,8 @@
 
     <!-- Acciones -->
 
-    <menuitem name="Tipos de objetos" id="game.menu_object_type" parent="game.menu_1"
-              action="game.action_object_window"/>
+    <menuitem name="Usuarios" id="game.menu_model_player" parent="game.menu_1"
+              action="game.action_player_window"/>
  
 
   </data>

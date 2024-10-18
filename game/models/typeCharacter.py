@@ -17,7 +17,7 @@ class type_character(models.Model):
     )
 
     #Características
-    PS = fields.Integer(
+    ps = fields.Integer(
         string="PS",     # Optional label of the field
         required = True  # Mandatory field
     )

@@ -16,7 +16,7 @@
             <field name="name"/>
             <field name="photo" widget="image"/>
             <field name="characterType"/>
-            <field name="PS"/>
+            <field name="ps"/>
             <field name="speed"/>
             <field name="attackF"/>
             <field name="attackM"/>
@@ -37,7 +37,7 @@
                     <field name="name"/>
                     <field name="photo" widget="image"/>
                     <field name="characterType"/>
-                    <field name="PS"/>
+                    <field name="ps"/>
                     <field name="speed"/>
                     <field name="attackF"/>
                     <field name="attackM"/>

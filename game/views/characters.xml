@@ -1,9 +1,9 @@
 <odoo>
   <data>
     <!-- explicit list view definition -->
- <record model="ir.ui.view" id="game.character_list">
-      <field name="name">game character list</field>
-      <field name="model">game.character</field>
+ <record model="ir.ui.view" id="game.characters_list">
+      <field name="name">game characters list</field>
+      <field name="model">game.characters</field>
       <field name="arch" type="xml">
         <tree>
             <field name="name"/>
@@ -18,9 +18,9 @@
 
 
 
-    <record model="ir.ui.view" id="game.character_form">
+    <record model="ir.ui.view" id="game.characters_form">
       <field name="name">game character form</field>
-      <field name="model">game.character</field>
+      <field name="model">game.characters</field>
       <field name="arch" type="xml">
         <form>
             <sheet>

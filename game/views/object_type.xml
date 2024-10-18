@@ -1,0 +1,57 @@
+<odoo>
+  <data>
+ 
+   <!-- explicit list view definition -->
+ <record model="ir.ui.view" id="game.object_type_list">
+      <field name="name">game object_type list</field>
+      <field name="model">game.object_type</field>
+      <field name="arch" type="xml">
+        <tree>
+            <field name="clase"/>
+            <field name="personaje"/>
+            <field name="pasiva"/>
+            <field name="activa"/>
+            <field name="stats"/>
+            <field name="calidad"/>
+            <field name="imagen" widget="image"/>
+        </tree>
+      </field>
+    </record>
+
+
+
+    <record model="ir.ui.view" id="game.object_type_form">
+      <field name="name">game object_type form</field>
+      <field name="model">game.object_type</field>
+      <field name="arch" type="xml">
+        <form>
+            <sheet>
+                <group>
+                    <field name="clase"/>
+                    <field name="personaje"/>
+                    <field name="pasiva"/>
+                    <field name="activa"/>
+                    <field name="stats"/>
+                    <field name="calidad"/>
+                    <field name="imagen" widget="image"/>
+                </group>
+            </sheet>
+        </form>
+      </field>
+    </record>
+    <!-- Acciones -->
+
+    <record model="ir.actions.act_window" id="game.action_object_type_window">
+      <field name="name">Tipos de objeto</field>
+      <field name="res_model">game.object_type</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Acciones -->
+
+    <menuitem name="Tipos de objetos" id="game.menu_object_type" parent="game.menu_1"
+              action="game.action_object_type_window"/>
+ 
+
+  </data>
+</odoo>

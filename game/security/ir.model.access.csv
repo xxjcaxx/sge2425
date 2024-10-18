@@ -1,2 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_game_type_character,game.type_character,model_game_type_character,base.group_user,1,1,1,1
+access_game_characters,game.characters,model_game_characters,base.group_user,1,1,1,1
+access_game_maps,game.maps,model_game_maps,base.group_user,1,1,1,1
+access_game_object_type,game.object_type,model_game_object_type,base.group_user,1,1,1,1
+access_game_dragon,game.dragon,model_game_dragon,base.group_user,1,1,1,1
+access_game_model_player,game.model_player,model_game_model_player,base.group_user,1,1,1,1

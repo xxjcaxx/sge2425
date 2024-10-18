@@ -21,6 +21,7 @@
                   <sheet>
                       <group>
                           <field name="name"/>
+                          
                           <field name="description"/>
                           <field name="avatar" widget="image"/>
                       </group>

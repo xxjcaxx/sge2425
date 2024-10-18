@@ -24,9 +24,11 @@ Long description of module's purpose
     'data': [
         'security/ir.model.access.csv',
         'views/views.xml',
-
+        'views/dragon.xml',
+         'views/maps.xml',
+        'views/characters.xml',
+        'views/object.xml', 
         'views/typeCharacter.xml',
-
         'views/dragon.xml',
         'views/maps.xml',
         'views/characters.xml',

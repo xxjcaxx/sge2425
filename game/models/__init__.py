@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from . import models, characters, maps, object_type,  dragon, model_player, typeCharacter, forja
+from . import models, characters, maps, object_type,  dragon, model_player, typeCharacter, forja, object
+
 
 

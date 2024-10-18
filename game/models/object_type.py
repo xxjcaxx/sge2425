@@ -5,17 +5,18 @@ class object_type(models.Model):
     _description = 'Descripción de los tipos de objetos.'
 
 
+    name = fields.Char()
     clase = fields.Selection([
-          ('1','Ligera'),
-          ('2','Media'),
-          ('3','Pesada')])
+          ('1','Tanque'),
+          ('2','Support'),
+          ('3','Mago'),
+          ('4','ADC')])
     personaje = fields.Text(string='Personaje')
     pasiva = fields.Text()
-    activa = fields.Text()
     stats = fields.Text()
     calidad = fields.Selection([
           ('1','Básico'),
           ('2','Épico'),
           ('3','Legendario'),
           ('4','Mítico')])
-    imagen = fields.Image()
+    imagen = fields.Image(max_width = 200, max_height = 200)

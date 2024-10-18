@@ -27,7 +27,7 @@ Long description of module's purpose
         'views/dragon.xml',
     'views/maps.xml',
        'views/characters.xml',
-
+        'views/object.xml', 
         'views/templates.xml',
         'views/object_type.xml',
         'views/model_player.xml'

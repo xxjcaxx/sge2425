@@ -26,7 +26,7 @@
 
     <!-- menu categories -->
 
-    <menuitem name="Pantalla Inicio" id="game.menu_1" parent="game.menu_root"/>
+    <menuitem name="Pantalla Inicio" id="game.menu_1_list" parent="game.menu_root"/>
 
 
   </data>

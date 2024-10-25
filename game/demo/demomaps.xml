@@ -1,0 +1,24 @@
+<odoo>
+    <data>
+        <record id="map0" model="game.maps">
+            <field name="name">Abismo</field>
+            <field name="mapShape">1</field>
+        </record>
+
+        <record id="map1" model="game.maps">
+            <field name="name">Grieta</field>
+            <field name="mapShape">2</field>
+        </record>
+
+        <record id="map2" model="game.maps">
+            <field name="name">Grieta</field>
+            <field name="mapShape">3</field>
+        </record>
+
+        <record id="map3" model="game.maps">
+            <field name="name">Grieta</field>
+            <field name="mapShape">4</field>
+        </record>
+
+    </data>
+</odoo>

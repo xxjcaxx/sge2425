@@ -35,7 +35,8 @@ Long description of module's purpose
         'views/forja.xml',
         'views/templates.xml',
         'views/object_type.xml',
-        'views/model_player.xml'
+        'views/model_player.xml',
+        'demo/demomaps.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

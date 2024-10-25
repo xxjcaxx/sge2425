@@ -25,12 +25,12 @@ Long description of module's purpose
         'security/ir.model.access.csv',
         'views/views.xml',
         'views/dragon.xml',
-    'views/maps.xml',
-       'views/characters.xml',
-
+        'views/maps.xml',
+        'views/characters.xml',
         'views/templates.xml',
         'views/object_type.xml',
-        'views/model_player.xml'
+        'views/model_player.xml',
+        'views/mercat_personatge.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

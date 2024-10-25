@@ -1,0 +1,29 @@
+<odoo>
+  <data>
+ 
+
+    <!-- Acciones -->
+
+    <record model="ir.actions.act_window" id="game.action_player_window">
+      <field name="name">Mercado Personajes</field>
+      <field name="res_model">game.mercat_personatge</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- Top menu item -->
+
+    <menuitem name="game" id="game.menu_root"/>
+
+    <!-- Sub-menú -->
+
+    <menuitem name="Ajustes" id="game.menu_1" parent="game.menu_root"/>
+
+    <!-- Acciones -->
+
+    <menuitem name="Mercado Personajes" id="game.menu_mercat_personatge" parent="game.menu_1"
+              action="game.action_player_window"/>
+ 
+
+  </data>
+</odoo>

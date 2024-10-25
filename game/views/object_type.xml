@@ -1,28 +1,56 @@
 <odoo>
   <data>
  
+   <!-- explicit list view definition -->
+ <record model="ir.ui.view" id="game.object_type_list">
+      <field name="name">game object_type list</field>
+      <field name="model">game.object_type</field>
+      <field name="arch" type="xml">
+        <tree>
+            <field name="name"/>
+            <field name="clase"/>
+            <field name="personaje"/>
+            <field name="pasiva"/>
+            <field name="stats"/>
+            <field name="calidad"/>
+            <field name="imagen" widget="image"/>
+        </tree>
+      </field>
+    </record>
 
+
+
+    <record model="ir.ui.view" id="game.object_type_form">
+      <field name="name">game object_type form</field>
+      <field name="model">game.object_type</field>
+      <field name="arch" type="xml">
+        <form>
+            <sheet>
+                <group>
+                    <field name="name"/>
+                    <field name="clase"/>
+                    <field name="personaje"/>
+                    <field name="pasiva"/>
+                    <field name="stats"/>
+                    <field name="calidad"/>
+                    <field name="imagen" widget="image"/>
+                </group>
+            </sheet>
+        </form>
+      </field>
+    </record>
     <!-- Acciones -->
 
-    <record model="ir.actions.act_window" id="game.action_object_window">
+    <record model="ir.actions.act_window" id="game.action_object_type_window">
       <field name="name">Tipos de objeto</field>
       <field name="res_model">game.object_type</field>
       <field name="view_mode">tree,form</field>
     </record>
 
-
-    <!-- Top menu item -->
-
-    <menuitem name="game" id="game.menu_root"/>
-
-    <!-- Sub-menú -->
-
-    <menuitem name="Ajustes" id="game.menu_1" parent="game.menu_root"/>
-
     <!-- Acciones -->
 
     <menuitem name="Tipos de objetos" id="game.menu_object_type" parent="game.menu_1"
-              action="game.action_object_window"/>
+              action="game.action_object_type_window"/>
  
 
   </data>

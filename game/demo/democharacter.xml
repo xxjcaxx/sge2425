@@ -1,0 +1,48 @@
+
+<odoo>
+    <data>
+
+          <record id="Character1Top" model="game.characters">
+            <field name="name">Gringo</field>
+            <field name="type">1</field>
+            <field name="level">5</field>
+            <field name="ps">500</field>
+            <field name="speed">200</field>
+            <field name="attackF">250</field>
+            <field name="attackM">100</field>
+            <field name="resistenceF">300</field>
+            <field name="resistenceM">200</field>
+            <field name="exp">1000</field>
+            <field name="objects">0</field>
+          </record>
+
+        <record id="Character2Jungle" model="game.characters">
+            <field name="name">Rat</field>
+            <field name="type">2</field>
+            <field name="level">20</field>
+            <field name="ps">1500</field>
+            <field name="speed">600</field>
+            <field name="attackF">100</field>
+            <field name="attackM">100</field>
+            <field name="resistenceF">500</field>
+            <field name="resistenceM">200</field>
+            <field name="exp">25000</field>
+            <field name="objects">0</field>
+          </record>
+
+        <!--<record id="Character3Support" model="game.characters">
+            <field name="name">Cat</field>
+            <field name="type">4</field>
+            <field name="level">10</field>
+            <field name="ps">3000</field>
+            <field name="speed">200</field>
+            <field name="attackF">50</field>
+            <field name="attackM">50</field>
+            <field name="resistenceF">500</field>
+            <field name="resistenceM">500</field>
+            <field name="exp">17500</field>
+            <field name="objects">0</field>
+          </record>-->
+
+    </data>
+</odoo>

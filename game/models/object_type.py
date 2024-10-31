@@ -4,7 +4,6 @@ class object_type(models.Model):
     _name = 'game.object_type'
     _description = 'Descripción de los tipos de objetos.'
 
-
     name = fields.Char()
     clase = fields.Selection([
           ('1','Tanque'),

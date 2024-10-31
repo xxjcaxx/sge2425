@@ -1,0 +1,58 @@
+<odoo>
+  <data>
+ 
+   <!-- explicit list view definition -->
+ <record model="ir.ui.view" id="game.match_list">
+      <field name="name">game match</field>
+      <field name="model">game.match</field>
+      <field name="arch" type="xml">
+        <tree>
+            <field name="lista_equipos"/>
+            <field name="lista_jugadores"/>
+            <field name="lista_personajes_jugador"/>
+            <field name="ganador"/>
+            <field name="data_inicio"/>
+            <field name="tiempo"/>
+            <field name="puntos"/>
+        </tree>
+      </field>
+    </record>
+
+
+
+    <record model="ir.ui.view" id="game.match_form">
+      <field name="name">game match</field>
+      <field name="model">game.match</field>
+      <field name="arch" type="xml">
+        <form>
+            <sheet>
+                <group>
+            <field name="lista_equipos"/>
+            <field name="lista_jugadores"/>
+            <field name="lista_personajes_jugador"/>
+            <field name="ganador"/>
+            <field name="data_inicio"/>
+            <field name="tiempo"/>
+            <field name="puntos"/>
+                </group>
+            </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- Acciones -->
+
+    <record model="ir.actions.act_window" id="game.action_match">
+      <field name="name">Match</field>
+      <field name="res_model">game.match</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Acciones -->
+
+    <menuitem name="Partida" id="game.menu_match" parent="game.menu_1"
+              action="game.action_match"/>
+ 
+
+  </data>
+</odoo>

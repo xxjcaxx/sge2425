@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
 
-from . import models, characters, maps, object_type,  dragon, model_player, typeCharacter, forja, object,match
-
-
+from . import models, characters, maps, object_type,  dragon, model_player, typeCharacter, forja, object,match, mercat_personatge
 

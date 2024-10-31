@@ -5,7 +5,9 @@ access_game_maps,game.maps,model_game_maps,base.group_user,1,1,1,1
 access_game_object_type,game.object_type,model_game_object_type,base.group_user,1,1,1,1
 access_game_dragon,game.dragon,model_game_dragon,base.group_user,1,1,1,1
 access_game_model_player,game.model_player,model_game_model_player,base.group_user,1,1,1,1
+access_game_mercat_personatge,game.mercat_personatge,model_game_mercat_personatge,base.group_user,1,1,1,1
 access_game_object,game.object,model_game_object,base.group_user,1,1,1,1
 access_game_forja,game.forja,model_game_forja,base.group_user,1,1,1,1
 access_game_model_player,game.model_player,model_game_model_player,base.group_user,1,1,1,1
 access_game_match,game.match,model_game_match,base.group_user,1,1,1,1
+

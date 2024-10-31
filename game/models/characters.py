@@ -7,7 +7,7 @@ class Characters(models.Model):
     _description = 'Game Characters'
 
     name = fields.Char()
-    type = fields.Many2one('game.type_character')
+    type = fields.Many2one('game.type_character', string="Character Type")
     level = fields.Integer()
     # Características
     ps = fields.Integer(string="PS", related='type.ps', store=True)

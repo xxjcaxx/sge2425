@@ -1,48 +1,99 @@
-
 <odoo>
     <data>
+        <record id="type_character_top" model="game.type_character">
+            <field name="name">Top</field>
+            <field name="characterType">1</field>
+            <field name="ps">100</field>
+            <field name="speed">10</field>
+            <field name="attackF">15</field>
+            <field name="attackM">5</field>
+            <field name="resistenceF">12</field>
+            <field name="resistenceM">8</field>
+        </record>
 
-          <record id="Character1Top" model="game.characters">
-            <field name="name">Gringo</field>
-            <field name="type">1</field>
-            <field name="level">5</field>
-            <field name="ps">500</field>
-            <field name="speed">200</field>
-            <field name="attackF">250</field>
-            <field name="attackM">100</field>
-            <field name="resistenceF">300</field>
-            <field name="resistenceM">200</field>
-            <field name="exp">1000</field>
-            <field name="objects">0</field>
-          </record>
+        <record id="character_demo_top" model="game.characters">
+            <field name="name">Garen</field>
+            <field name="type" ref="game.type_character_top"/>
+            <field name="level">1</field>
+            <field name="exp">0</field>
+            <field name="objects">Sword, Shield</field>
+        </record>
 
-        <record id="Character2Jungle" model="game.characters">
-            <field name="name">Rat</field>
-            <field name="type">2</field>
-            <field name="level">20</field>
-            <field name="ps">1500</field>
-            <field name="speed">600</field>
-            <field name="attackF">100</field>
-            <field name="attackM">100</field>
-            <field name="resistenceF">500</field>
-            <field name="resistenceM">200</field>
-            <field name="exp">25000</field>
-            <field name="objects">0</field>
-          </record>
+        <record id="type_character_jungle" model="game.type_character">
+            <field name="name">Jungle</field>
+            <field name="characterType">2</field>
+            <field name="ps">1020</field>
+            <field name="speed">107</field>
+            <field name="attackF">175</field>
+            <field name="attackM">57</field>
+            <field name="resistenceF">127</field>
+            <field name="resistenceM">87</field>
+        </record>
 
-        <!--<record id="Character3Support" model="game.characters">
-            <field name="name">Cat</field>
-            <field name="type">4</field>
-            <field name="level">10</field>
-            <field name="ps">3000</field>
-            <field name="speed">200</field>
-            <field name="attackF">50</field>
-            <field name="attackM">50</field>
-            <field name="resistenceF">500</field>
-            <field name="resistenceM">500</field>
-            <field name="exp">17500</field>
-            <field name="objects">0</field>
-          </record>-->
+        <record id="character_demo_jungle" model="game.characters">
+            <field name="name">Sejuani</field>
+            <field name="type" ref="game.type_character_jungle"/>
+            <field name="level">1</field>
+            <field name="exp">0</field>
+            <field name="objects">Shield</field>
+        </record>
+
+        <record id="type_character_mid" model="game.type_character">
+            <field name="name">Mid</field>
+            <field name="characterType">3</field>
+            <field name="ps">1800</field>
+            <field name="speed">180</field>
+            <field name="attackF">185</field>
+            <field name="attackM">58</field>
+            <field name="resistenceF">182</field>
+            <field name="resistenceM">88</field>
+        </record>
+
+        <record id="character_demo_mid" model="game.characters">
+            <field name="name">Irelia</field>
+            <field name="type" ref="game.type_character_top"/>
+            <field name="level">4</field>
+            <field name="exp">0</field>
+            <field name="objects">Sword, another sword , Shield</field>
+        </record>
+
+        <record id="type_character_adc" model="game.type_character">
+            <field name="name">Adc</field>
+            <field name="characterType">4</field>
+            <field name="ps">10420</field>
+            <field name="speed">1047</field>
+            <field name="attackF">1745</field>
+            <field name="attackM">57</field>
+            <field name="resistenceF">127</field>
+            <field name="resistenceM">847</field>
+        </record>
+
+        <record id="character_demo_adc" model="game.characters">
+            <field name="name">Ziggs</field>
+            <field name="type" ref="game.type_character_adc"/>
+            <field name="level">1</field>
+            <field name="exp">0</field>
+            <field name="objects">Shield</field>
+        </record>
+
+         <record id="type_character_support" model="game.type_character">
+            <field name="name">Support</field>
+            <field name="characterType">5</field>
+            <field name="ps">1020</field>
+            <field name="speed">147</field>
+            <field name="attackF">145</field>
+            <field name="attackM">5</field>
+            <field name="resistenceF">17</field>
+            <field name="resistenceM">87</field>
+        </record>
+
+        <record id="character_demo_support" model="game.characters">
+            <field name="name">Yummi</field>
+            <field name="type" ref="game.type_character_support"/>
+            <field name="level">1</field>
+            <field name="exp">0</field>
+            <field name="objects">Shield, potis</field>
+        </record>
 
     </data>
 </odoo>

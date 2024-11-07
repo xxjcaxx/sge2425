@@ -19,6 +19,9 @@
             <field name="objects">Sword, Shield</field>
         </record>
 
+
+
+
         <record id="type_character_jungle" model="game.type_character">
             <field name="name">Jungle</field>
             <field name="characterType">2</field>
@@ -37,6 +40,9 @@
             <field name="exp">0</field>
             <field name="objects">Shield</field>
         </record>
+
+
+
 
         <record id="type_character_mid" model="game.type_character">
             <field name="name">Mid</field>
@@ -57,6 +63,9 @@
             <field name="objects">Sword, another sword , Shield</field>
         </record>
 
+
+
+
         <record id="type_character_adc" model="game.type_character">
             <field name="name">Adc</field>
             <field name="characterType">4</field>
@@ -75,6 +84,9 @@
             <field name="exp">0</field>
             <field name="objects">Shield</field>
         </record>
+
+
+
 
          <record id="type_character_support" model="game.type_character">
             <field name="name">Support</field>

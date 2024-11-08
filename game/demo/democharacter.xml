@@ -1,5 +1,6 @@
 <odoo>
     <data>
+
         <record id="type_character_top" model="game.type_character">
             <field name="name">Top</field>
             <field name="characterType">1</field>
@@ -18,9 +19,6 @@
             <field name="exp">0</field>
             <field name="objects">Sword, Shield</field>
         </record>
-
-
-
 
         <record id="type_character_jungle" model="game.type_character">
             <field name="name">Jungle</field>
@@ -41,9 +39,6 @@
             <field name="objects">Shield</field>
         </record>
 
-
-
-
         <record id="type_character_mid" model="game.type_character">
             <field name="name">Mid</field>
             <field name="characterType">3</field>
@@ -57,14 +52,11 @@
 
         <record id="character_demo_mid" model="game.characters">
             <field name="name">Irelia</field>
-            <field name="type" ref="game.type_character_top"/>
+            <field name="type" ref="game.type_character_mid"/>
             <field name="level">4</field>
             <field name="exp">0</field>
-            <field name="objects">Sword, another sword , Shield</field>
+            <field name="objects">Sword, another sword, Shield</field>
         </record>
-
-
-
 
         <record id="type_character_adc" model="game.type_character">
             <field name="name">Adc</field>
@@ -85,10 +77,7 @@
             <field name="objects">Shield</field>
         </record>
 
-
-
-
-         <record id="type_character_support" model="game.type_character">
+        <record id="type_character_support" model="game.type_character">
             <field name="name">Support</field>
             <field name="characterType">5</field>
             <field name="ps">1020</field>
@@ -104,7 +93,7 @@
             <field name="type" ref="game.type_character_support"/>
             <field name="level">1</field>
             <field name="exp">0</field>
-            <field name="objects">Shield, potis</field>
+            <field name="objects">Shield, potions</field>
         </record>
 
     </data>

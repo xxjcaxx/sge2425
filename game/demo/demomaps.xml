@@ -1,5 +1,6 @@
 <odoo>
     <data>
+
         <record id="map1" model="game.maps">
             <field name="name">Abismo</field>
             <field name="mapShape">1</field>

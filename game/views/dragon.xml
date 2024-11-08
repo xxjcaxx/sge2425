@@ -5,7 +5,7 @@
       <field name="name">game dragon list</field>
       <field name="model">game.dragon</field>
       <field name="arch" type="xml">
-        <tree>
+        <tree editable="bottom">
             <field name="name"/>
             <field name="timeout"/>
             <field name="expGained"/>
@@ -34,6 +34,43 @@
         </form>
       </field>
     </record>
+
+
+
+      <record model="ir.ui.view" id="game.dragon_kanban_view">
+            <field name="name">Dragon kanban</field>
+            <field name="model">game.dragon</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="name"/>
+                    <field name="id"/>
+                    <field name="avatar"/>
+                    <field name="type"/>
+                    <field name="expGained"/>
+
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_card">
+                                <a type="open">
+                                    <img class="o_image_64_contain"
+                                         t-att-alt="record.name.value"
+                                         t-att-src="kanban_image('game.dragon', 'avatar', record.id.raw_value)" />
+                                </a>
+
+                                <div class="oe_kanban_details">
+                                    <strong><field name="name"/></strong>
+                                    <div>Tipo: <field name="type"/></div>
+                                    <div>Experiencia: <field name="expGained"/> XP</div>
+                                </div>
+
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+
 
     <!-- actions opening views on models -->
 

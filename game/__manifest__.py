@@ -37,6 +37,7 @@ Long description of module's purpose
         'views/object_type.xml',
         'views/model_player.xml',
         'views/mercat_personatge.xml',
+        'demo/typeCharacter.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

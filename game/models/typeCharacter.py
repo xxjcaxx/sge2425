@@ -45,12 +45,3 @@ class type_character(models.Model):
         string="Magic Resistence",  # Optional label of the field
         required=True  # Mandatory field
     )
-
-    # Tipo de personaje
-    characterType = fields.Selection([
-        ('1', 'Top'),
-        ('2', 'Jungle'),
-        ('3', 'Mid'),
-        ('4', 'ADC'),
-        ('5', 'Support'),
-    ])

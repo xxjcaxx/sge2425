@@ -2,6 +2,7 @@
 
 from odoo import models, fields, api
 
+
 class type_character(models.Model):
     _name = 'game.type_character'
     _description = 'Type Character of game'
@@ -10,6 +11,9 @@ class type_character(models.Model):
         string="Name",   # Optional label of the field
         required = True  # Mandatory field
     )
+    character = fields.One2many('game.characters', 'characterType',
+                                string='Character')
+
     photo = fields.Image(
         string="Photo",  # Optional label of the field
         max_width = 200, 

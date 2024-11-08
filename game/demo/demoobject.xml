@@ -1,0 +1,43 @@
+<odoo> <!-- Crear un tipo de objecto y un objecto relacionado con el  
+            Cada record es una fila
+        -->
+    <data>
+
+        <record id="game.object_type_arma" model="game.object_type">
+            <field name="name">Arma</field>
+            <field name="clase">2</field>
+            <field name="pasiva">+80% AP</field>
+            <field name="calidad">3</field>
+        </record>
+
+
+        <record id="game.object_type_armadura" model="game.object_type">
+            <field name="name">Armadura</field>
+            <field name="clase">3</field>
+            <field name="pasiva">+20% AD</field>
+            <field name="calidad">2</field>
+        </record>
+
+
+          <record id="game.object_sombrero" model="game.object">
+            <field name="character" ref="character_demo_top"></field>
+            <field name="nombre">Sombrero de rabadón</field>
+            <field name="precio">3400</field>
+            <field name="stats">70 AD</field>
+            <field name="activa">Invisibilidad al matar</field>
+            <field name="tipo" ref="game.object_type_arma"></field>
+          </record>
+
+
+        <record id="game.object_filo" model="game.object">
+            <field name="character" ref="character_demo_jungle"></field>
+            <field name="nombre">Filo Infinito</field>
+            <field name="precio">3400</field>
+            <field name="stats">20% crítico</field>
+            <field name="activa">+30% velocidad</field>
+            <field name="tipo" ref="game.object_type_armadura"></field>
+        </record>
+
+
+    </data>
+</odoo>

@@ -38,7 +38,8 @@ Long description of module's purpose
         'views/object_type.xml',
         'views/model_player.xml',
         'demo/democharacter.xml',
-         'views/match.xml',
+        'demo/demoforja.xml',
+        'views/match.xml',
         'views/mercat_personatge.xml',
     ],
     # only loaded in demonstration mode

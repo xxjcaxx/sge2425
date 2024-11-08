@@ -16,7 +16,6 @@
     </record>
 
 
-
     <record model="ir.ui.view" id="game.dragon_form">
       <field name="name">game dragon form</field>
       <field name="model">game.dragon</field>

@@ -10,9 +10,7 @@ class object_type(models.Model):
           ('2','Support'),
           ('3','Mago'),
           ('4','ADC')])
-    personaje = fields.Text(string='Personaje')
     pasiva = fields.Text()
-    stats = fields.Text()
     calidad = fields.Selection([
           ('1','Básico'),
           ('2','Épico'),

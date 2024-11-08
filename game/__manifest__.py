@@ -22,8 +22,9 @@ Long description of module's purpose
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
         'views/views.xml',
+<<<<<<< HEAD
 <<<<<<< Updated upstream
         'views/templates.xml',
 =======
@@ -41,6 +42,24 @@ Long description of module's purpose
         'views/model_player.xml',
         'views/teams.xml'
 >>>>>>> Stashed changes
+=======
+        'views/dragon.xml',
+
+         'views/maps.xml',
+        'views/characters.xml',
+        'views/object.xml', 
+        'views/typeCharacter.xml',
+        'views/dragon.xml',
+        'views/maps.xml',
+        'views/characters.xml',
+        'views/forja.xml',
+        'views/templates.xml',
+        'views/object_type.xml',
+        'views/model_player.xml',
+        'demo/democharacter.xml',
+         'views/match.xml',
+        'views/mercat_personatge.xml',
+>>>>>>> master
     ],
     # only loaded in demonstration mode
     'demo': [

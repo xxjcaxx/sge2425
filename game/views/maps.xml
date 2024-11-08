@@ -1,0 +1,42 @@
+<odoo>
+    <data>
+
+        <!-- explicit list view definition -->
+        <record model="ir.ui.view" id="game.maps_list">
+            <field name="name">game maps list</field>
+            <field name="model">game.maps</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="mapShape"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="game.maps_form">
+            <field name="name">game maps form</field>
+            <field name="model">game.maps</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="mapShape"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- actions opening views on models -->
+        <record model="ir.actions.act_window" id="game.action_maps">
+            <field name="name">game maps</field>
+            <field name="res_model">game.maps</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- actions -->
+        <menuitem name="Game Maps" id="game.menu_maps" parent="game.menu_1"
+                  action="game.action_maps"/>
+    </data>
+</odoo>

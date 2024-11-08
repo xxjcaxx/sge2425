@@ -1,12 +1,19 @@
+<<<<<<< HEAD
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api      
+=======
+from odoo import models, fields
+>>>>>>> master
 
 class object_type(models.Model):
     _name = 'game.object_type'
     _description = 'Descripción de los tipos de objetos.'
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
     name = fields.Char()
     clase = fields.Selection([
           ('1','Tanque'),

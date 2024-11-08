@@ -24,7 +24,23 @@ Long description of module's purpose
     'data': [
         # 'security/ir.model.access.csv',
         'views/views.xml',
+<<<<<<< Updated upstream
         'views/templates.xml',
+=======
+        'views/dragon.xml',
+        'views/maps.xml',
+        'views/characters.xml',
+        'views/object.xml', 
+        'views/typeCharacter.xml',
+        'views/dragon.xml',
+        'views/maps.xml',
+        'views/characters.xml',
+        'views/forja.xml',
+        'views/templates.xml',
+        'views/object_type.xml',
+        'views/model_player.xml',
+        'views/teams.xml'
+>>>>>>> Stashed changes
     ],
     # only loaded in demonstration mode
     'demo': [

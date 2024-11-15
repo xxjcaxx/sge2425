@@ -1,117 +1,81 @@
 <odoo>
   <data>
-    <!-- explicit list view definition -->
- <record model="ir.ui.view" id="game.dragon_list">
+    <!-- Vista de lista para game.dragon -->
+    <record model="ir.ui.view" id="game.dragon_list">
       <field name="name">game dragon list</field>
       <field name="model">game.dragon</field>
       <field name="arch" type="xml">
-        <tree editable="bottom">
-            <field name="name"/>
-            <field name="type"/>
-            <field name="timeout"/>
-            <field name="expGained"/>
-            <field name="avatar" widget="image"/>
+        <tree decoration-info="expGained>5000">
+          <field name="name"/>
+          <field name="type"/>
+          <field name="timeout"/>
+          <field name="expGained"/>
+          <field name="avatar" widget="image"/>
         </tree>
       </field>
     </record>
 
-
+    <!-- Vista de formulario para game.dragon -->
     <record model="ir.ui.view" id="game.dragon_form">
       <field name="name">game dragon form</field>
       <field name="model">game.dragon</field>
       <field name="arch" type="xml">
         <form>
-            <sheet>
-                <group>
-                    <field name="name"/>
-                    <field name="type"/>
-                    <field name="timeout"/>
-                    <field name="expGained"/>
-                    <field name="avatar" widget="image"/>
-                </group>
-            </sheet>
+          <sheet>
+            <group>
+              <field name="name"/>
+              <field name="type"/>
+              <field name="timeout"/>
+              <field name="expGained"/>
+              <field name="avatar" widget="image"/>
+            </group>
+          </sheet>
         </form>
       </field>
     </record>
 
+    <!-- Vista Kanban para game.dragon -->
+    <record model="ir.ui.view" id="game.dragon_kanban_view">
+      <field name="name">Dragon kanban</field>
+      <field name="model">game.dragon</field>
+      <field name="arch" type="xml">
+        <kanban>
+          <field name="name"/>
+          <field name="id"/>
+          <field name="avatar"/>
+          <field name="type"/>
+          <field name="expGained"/>
 
+          <templates>
+            <t t-name="kanban-box">
+              <div class="oe_kanban_card" t-att-style="record.expGained.raw_value > 5000 and 'background-color: #ffcccc;' or ''">
+                <a type="open">
+                  <img class="o_image_64_contain"
+                       t-att-alt="record.name.value"
+                       t-att-src="kanban_image('game.dragon', 'avatar', record.id.raw_value)" />
+                </a>
 
-      <record model="ir.ui.view" id="game.dragon_kanban_view">
-            <field name="name">Dragon kanban</field>
-            <field name="model">game.dragon</field>
-            <field name="arch" type="xml">
-                <kanban>
-                    <field name="name"/>
-                    <field name="id"/>
-                    <field name="avatar"/>
-                    <field name="type"/>
-                    <field name="expGained"/>
+                <div class="oe_kanban_details">
+                  <strong><field name="name"/></strong>
+                  <div>Tipo: <field name="type"/></div>
+                  <div>Experiencia: <field name="expGained"/> XP</div>
+                </div>
+              </div>
+            </t>
+          </templates>
+</kanban>
 
-                    <templates>
-                        <t t-name="kanban-box">
-                            <div class="oe_kanban_card">
-                                <a type="open">
-                                    <img class="o_image_64_contain"
-                                         t-att-alt="record.name.value"
-                                         t-att-src="kanban_image('game.dragon', 'avatar', record.id.raw_value)" />
-                                </a>
+      </field>
+    </record>
 
-                                <div class="oe_kanban_details">
-                                    <strong><field name="name"/></strong>
-                                    <div>Tipo: <field name="type"/></div>
-                                    <div>Experiencia: <field name="expGained"/> XP</div>
-                                </div>
-
-                            </div>
-                        </t>
-                    </templates>
-                </kanban>
-            </field>
-        </record>
-
-
-
-    <!-- actions opening views on models -->
-
+    <!-- Acción para abrir las vistas kanban, lista y formulario -->
     <record model="ir.actions.act_window" id="game.dragon_action_window">
       <field name="name">Dragon</field>
       <field name="res_model">game.dragon</field>
-      <field name="view_mode">tree,form</field>
+      <field name="view_mode">kanban,tree,form</field>
     </record>
 
-
-    <!-- server action to the one above -->
-<!--
-    <record model="ir.actions.server" id="game.action_server">
-      <field name="name">game server</field>
-      <field name="model_id" ref="model_game_game"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": model._name,
-        }
-      </field>
-    </record>
--->
-
-    <!-- Top menu item -->
-<!--
-    <menuitem name="game" id="game.menu_root"/>
--->
-    <!-- menu categories -->
-<!--
-    <menuitem name="Menu 1" id="game.menu_1" parent="game.menu_root"/>
-    <menuitem name="Menu 2" id="game.menu_2" parent="game.menu_root"/>
--->
-    <!-- actions -->
-
-
-<!-- Este es el que hay que tocar-->
-
-    <menuitem name="Dragon" id="game.menu_dragon" parent="game.menu_1"
-              action="game.dragon_action_window"/>
-
+    <!-- Menú para acceder a las vistas de game.dragon -->
+    <menuitem name="Dragon" id="game.menu_dragon" parent="game.menu_1" action="game.dragon_action_window"/>
   </data>
 </odoo>

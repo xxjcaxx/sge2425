@@ -24,8 +24,8 @@ Long description of module's purpose
     'data': [
         'security/ir.model.access.csv',
         'views/views.xml',
-
-
+        'views/dragon.xml',
+         'views/maps.xml',
         'views/templates.xml',
         'views/dragon.xml',
         'views/maps.xml',
@@ -46,6 +46,7 @@ Long description of module's purpose
         'demo/democharacter.xml',
          'views/match.xml',
         'views/mercat_personatge.xml',
+        'demo/typeCharacter.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

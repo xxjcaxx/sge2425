@@ -1,55 +1,55 @@
 <odoo>
-  <data>
-    <!-- Acciones -->
-    <record model="ir.actions.act_window" id="game.type_character_window">
-      <field name="name">Tipos de personajes</field>
-      <field name="res_model">game.type_character</field>
-      <field name="view_mode">tree,form</field>
-    </record>
+    <data>
+        <!-- Acciones -->
+        <record model="ir.actions.act_window" id="game.type_character_window">
+            <field name="name">Tipos de personajes</field>
+            <field name="res_model">game.type_character</field>
+            <field name="view_mode">tree,form</field>
+        </record>
 
-    <!-- Tree -->
-    <record model="ir.ui.view" id="game.type_character_tree">
-      <field name="name">game type_character</field>
-      <field name="model">game.type_character</field>
-      <field name="arch" type="xml">
-        <tree>
-            <field name="name"/>
-            <field name="photo" widget="image"/>
-            <field name="characterType"/>
-            <field name="ps"/>
-            <field name="speed"/>
-            <field name="attackF"/>
-            <field name="attackM"/>
-            <field name="resistenceF"/>
-            <field name="resistenceM"/>
-        </tree>
-      </field>
-    </record>
-
-    <!-- Form -->
-    <record model="ir.ui.view" id="game.type_character_form">
-      <field name="name">game type_character</field>
-      <field name="model">game.type_character</field>
-      <field name="arch" type="xml">
-        <form>
-            <sheet>
-                <group>
+        <!-- Tree -->
+        <record model="ir.ui.view" id="game.type_character_tree">
+            <field name="name">game type_character</field>
+            <field name="model">game.type_character</field>
+            <field name="arch" type="xml">
+                <tree>
                     <field name="name"/>
                     <field name="photo" widget="image"/>
-                    <field name="characterType"/>
                     <field name="ps"/>
                     <field name="speed"/>
                     <field name="attackF"/>
                     <field name="attackM"/>
                     <field name="resistenceF"/>
                     <field name="resistenceM"/>
-                </group>
-            </sheet>
-        </form>
-      </field>
-    </record>
+                </tree>
+            </field>
+        </record>
 
-    <!-- Acciones -->
-    <menuitem name="Tipos de personajes" id="game.type_character" parent="game.menu_1" action="game.type_character_window"/>
-  </data>
+        <!-- Form -->
+        <record model="ir.ui.view" id="game.type_character_form">
+            <field name="name">game type_character</field>
+            <field name="model">game.type_character</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="photo" widget="image"/>
+                            <field name="ps"/>
+                            <field name="speed"/>
+                            <field name="attackF"/>
+                            <field name="attackM"/>
+                            <field name="resistenceF"/>
+                            <field name="resistenceM"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <!-- Acciones -->
+        <menuitem name="Tipos de personajes" id="game.type_character" parent="game.menu_1"
+                  action="game.type_character_window"/>
+    </data>
 </odoo>

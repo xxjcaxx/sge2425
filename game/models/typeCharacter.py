@@ -54,3 +54,4 @@ class type_character(models.Model):
         ('4', 'ADC'),
         ('5', 'Support'),
     ])
+

@@ -9,9 +9,7 @@
         <tree>
             <field name="name"/>
             <field name="clase"/>
-            <field name="personaje"/>
             <field name="pasiva"/>
-            <field name="stats"/>
             <field name="calidad"/>
             <field name="imagen" widget="image"/>
         </tree>
@@ -29,9 +27,7 @@
                 <group>
                     <field name="name"/>
                     <field name="clase"/>
-                    <field name="personaje"/>
                     <field name="pasiva"/>
-                    <field name="stats"/>
                     <field name="calidad"/>
                     <field name="imagen" widget="image"/>
                 </group>

@@ -7,9 +7,15 @@
       <field name="arch" type="xml">
         <tree>
             <field name="name"/>
+            <field name="type"/>
             <field name="level"/>
+            <field name="ps"/>
+            <field name="speed"/>
+            <field name="attackF"/>
+            <field name="attackM"/>
+            <field name="resistenceF"/>
+            <field name="resistenceM"/>
             <field name="exp"/>
-            <field name="stats"/>
             <field name="objects"/>
             <field name="picture" widget="image"/>
         </tree>
@@ -26,9 +32,15 @@
             <sheet>
                 <group>
                     <field name="name"/>
+                    <field name="type"/>
                     <field name="level"/>
+                    <field name="ps"/>
+                    <field name="speed"/>
+                    <field name="attackF"/>
+                    <field name="attackM"/>
+                    <field name="resistenceF"/>
+                    <field name="resistenceM"/>
                     <field name="exp"/>
-                    <field name="stats"/>
                     <field name="objects"/>
                     <field name="picture" widget="image"/>
                 </group>

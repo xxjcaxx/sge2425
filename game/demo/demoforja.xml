@@ -1,0 +1,20 @@
+<odoo>
+    <data>
+
+        <record id="character_forja1" model="game.forja">
+            <field name="name">Forja1</field>
+            <field name="description" >La forja basica, se desbloquea al inicio de la partida</field>
+        </record>
+
+        <record id="character_forja2" model="game.forja">
+            <field name="name">Forja2</field>
+            <field name="description" >La forja intermedia, se desbloquea cuando el personaje alcanza el nivel x (aun  por establecer)</field>
+        </record>
+
+        <record id="character_forja3" model="game.forja">
+            <field name="name">Forja3</field>
+            <field name="description" >La forja avanzada, epicarda, se desbloquea cuando el personaje alcanza el nivel x (aun  por establecer)</field>
+        </record>
+
+    </data>
+</odoo>

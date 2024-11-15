@@ -44,7 +44,8 @@ Long description of module's purpose
         'views/teams.xml'
 
         'demo/democharacter.xml',
-         'views/match.xml',
+        'demo/demoforja.xml',
+        'views/match.xml',
         'views/mercat_personatge.xml',
         'demo/typeCharacter.xml'
     ],

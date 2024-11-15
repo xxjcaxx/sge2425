@@ -10,4 +10,4 @@ access_game_forja,game.forja,model_game_forja,base.group_user,1,1,1,1
 access_game_teams,game.teams,model_game_teams,base.group_user,1,1,1,1
 access_game_mercat_personatge,game.mercat_personatge,model_game_mercat_personatge,base.group_user,1,1,1,1
 access_game_match,game.match,model_game_match,base.group_user,1,1,1,1
-
+access_game_dragon_type,game.dragon_type,model_game_dragon_type,base.group_user,1,1,1,1

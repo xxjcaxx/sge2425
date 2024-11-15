@@ -38,12 +38,13 @@ Long description of module's purpose
         'views/templates.xml',
         'views/object_type.xml',
         'views/model_player.xml',
-
-        'demo/demomaps.xml'
-
-        'views/teams.xml'
-
+        'demo/demomaps.xml',
+        'views/teams.xml',
         'demo/democharacter.xml',
+        'views/match.xml',
+        'views/mercat_personatge.xml',
+        'demo/demodragon.xml',
+        'views/dragon_type.xml',
         'demo/demoforja.xml',
         'views/match.xml',
         'views/mercat_personatge.xml',

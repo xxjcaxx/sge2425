@@ -7,9 +7,9 @@
       <field name="arch" type="xml">
         <tree editable="bottom">
             <field name="name"/>
+            <field name="type"/>
             <field name="timeout"/>
             <field name="expGained"/>
-            <field name="type"/>
             <field name="avatar" widget="image"/>
         </tree>
       </field>
@@ -24,9 +24,9 @@
             <sheet>
                 <group>
                     <field name="name"/>
+                    <field name="type"/>
                     <field name="timeout"/>
                     <field name="expGained"/>
-                    <field name="type"/>
                     <field name="avatar" widget="image"/>
                 </group>
             </sheet>

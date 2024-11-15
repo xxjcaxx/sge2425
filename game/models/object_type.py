@@ -1,8 +1,14 @@
-from odoo import models, fields
+
+# -*- coding: utf-8 -*-
+
+from odoo import models, fields, api      
+
+
 
 class object_type(models.Model):
     _name = 'game.object_type'
     _description = 'Descripción de los tipos de objetos.'
+
 
     name = fields.Char()
     clase = fields.Selection([
@@ -10,9 +16,7 @@ class object_type(models.Model):
           ('2','Support'),
           ('3','Mago'),
           ('4','ADC')])
-    personaje = fields.Text(string='Personaje')
     pasiva = fields.Text()
-    stats = fields.Text()
     calidad = fields.Selection([
           ('1','Básico'),
           ('2','Épico'),

@@ -4,7 +4,7 @@
         <record model="ir.actions.act_window" id="game.type_character_window">
             <field name="name">Tipos de personajes</field>
             <field name="res_model">game.type_character</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">tree,form,kanban</field>
         </record>
 
         <!-- Tree -->
@@ -47,7 +47,46 @@
             </field>
         </record>
 
+        <record model="ir.ui.view" id="game.type_character_kanban">
+            <field name="name">game type_character kanban</field>
+            <field name="model">game.type_character</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="id"></field>
+                    <field name="name"/>
+                    <field name="photo" widget="image"/>
+                    <field name="ps"/>
+                    <field name="speed"/>
+                    <field name="attackF"/>
+                    <field name="attackM"/>
+                    <field name="resistenceF"/>
+                    <field name="resistenceM"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_product_vignette">
+                                <a type="open">
+                                    <img class="oe_kanban_image"
+                                         t-att-alt="record.name.value"
+                                         t-att-src="kanban_image('game.type_character', 'photo', record.id.value)"/>
+                                </a>
+                                <div class="oe_product_desc">
 
+                                    <ul>
+                                        <li>Name:
+                                            <field name="name"></field>
+                                        </li>
+                                        <li>Health points:
+                                            <field name="ps"></field>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
         <!-- Acciones -->
         <menuitem name="Tipos de personajes" id="game.type_character" parent="game.menu_1"
                   action="game.type_character_window"/>

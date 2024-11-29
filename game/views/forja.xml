@@ -29,11 +29,40 @@
           </field>
       </record>
 
+      <record model="ir.ui.view" id="game.forja_kanban">
+          <field name="name">game forja kanban</field>
+          <field name="model">game.forja</field>
+          <field name="arch" type="xml">
+              <kanban>
+                  <templates>
+                      <t t-name="kanban-box">
+                          <div class="oe_kanban_card">
+                              <div class="oe_kanban_avatar">
+                                  <img t-att-src="kanban_image('game.forja', 'avatar', record.id)" alt="Avatar"/>
+                              </div>
+                              <div class="oe_kanban_details">
+                                  <strong><field name="name"/></strong>
+                                  <div><field name="description"/></div>
+                              </div>
+                          </div>
+                      </t>
+                  </templates>
+              </kanban>
+          </field>
+      </record>
+
+
+
+
 
       <record model="ir.actions.act_window" id="game.action_forja_window">
           <field name="name">Forja</field>
           <field name="res_model">game.forja</field>
           <field name="view_mode">tree,form</field>
+      </record>
+
+      <record id="game.action_forja_window" model="ir.actions.act_window">
+          <field name="view_mode">kanban,tree,form</field>
       </record>
 
     <menuitem name="Forja" id="game.menu_1_list" parent="game.menu_1"

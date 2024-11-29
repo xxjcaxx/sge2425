@@ -1,7 +1,6 @@
 <odoo>
     <data>
 
-        <!-- explicit list view definition -->
         <record model="ir.ui.view" id="game.maps_list">
             <field name="name">game maps list</field>
             <field name="model">game.maps</field>
@@ -28,15 +27,59 @@
             </field>
         </record>
 
-        <!-- actions opening views on models -->
-        <record model="ir.actions.act_window" id="game.action_maps">
-            <field name="name">game maps</field>
-            <field name="res_model">game.maps</field>
-            <field name="view_mode">tree,form</field>
+        <record model="ir.ui.view" id="game.maps_kanban_basic">
+            <field name="name">game maps kanban basic</field>
+            <field name="model">game.maps</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_card">
+                                <div class="oe_kanban_details">
+                                    <strong><field name="name"/></strong>
+                                    <div>Shape: <field name="mapShape"/></div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
         </record>
 
-        <!-- actions -->
-        <menuitem name="Game Maps" id="game.menu_maps" parent="game.menu_1"
-                  action="game.action_maps"/>
+        <record model="ir.ui.view" id="game.maps_kanban_enriched">
+            <field name="name">game maps kanban enriched</field>
+            <field name="model">game.maps</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <a type="open">
+                                <div class="oe_kanban_card">
+                                    <div class="oe_kanban_details">
+                                        <div>
+                                            <img t-if="record.mapShape.raw_value" t-att-src="record.mapShape.raw_value"
+                                                alt="Map Shape" style="max-height: 100px; max-width: 100px;"/>
+                                        </div>
+                                        <div>
+                                            <strong><field name="name"/></strong>
+                                        </div>
+                                        <div>Shape: <field name="mapShape"/></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="game.action_maps">
+            <field name="name">Game Maps</field>
+            <field name="res_model">game.maps</field>
+            <field name="view_mode">kanban,tree,form</field>
+        </record>
+
+        <menuitem name="Game Maps" id="game.menu_maps" parent="game.menu_1" action="game.action_maps"/>
+
     </data>
 </odoo>

@@ -1,29 +1,99 @@
 <odoo>
   <data>
- 
 
-    <!-- Acciones -->
 
-    <record model="ir.actions.act_window" id="game.action_player_window">
-      <field name="name">Usuarios</field>
-      <field name="res_model">game.model_player</field>
-      <field name="view_mode">tree,form</field>
+
+       <!-- explicit list view definition -->
+ <record model="ir.ui.view" id="game.model_player_list">
+      <field name="name">game model_player list</field>
+      <field name="model">game.model_player</field>
+      <field name="arch" type="xml">
+        <tree>
+            <field name="nom_usuario"/>
+            <field name="estado"/>
+            <field name="correo"/>
+            <field name="nivel"/>
+            <field name="icono" widget="image"/>
+            <field name="equipo"/>
+            <field name="personajes"/>
+        </tree>
+      </field>
     </record>
 
 
-    <!-- Top menu item -->
 
-    <menuitem name="game" id="game.menu_root"/>
+    <record model="ir.ui.view" id="game.model_player_form">
+      <field name="name">game model_player form</field>
+      <field name="model">game.model_player</field>
+      <field name="arch" type="xml">
+        <form>
+            <sheet>
+                <group>
+                    <field name="nom_usuario"/>
+                    <field name="estado"/>
+                    <field name="correo"/>
+                    <field name="nivel"/>
+                    <field name="icono" widget="image"/>
+                    <field name="equipo"/>
+                    <field name="personajes"/>
+                </group>
+            </sheet>
+        </form>
+      </field>
+    </record>
 
-    <!-- Sub-menú -->
+     <!-- Vista Kanban para game.dragon -->
+   <record model="ir.ui.view" id="game.model_player_kanban_view">
+    <field name="name">model_player kanban</field>
+    <field name="model">game.model_player</field>
+    <field name="arch" type="xml">
+        <kanban>
+            <field name="nom_usuario"/>
+            <field name="estado"/>
+            <field name="correo"/>
+            <field name="nivel"/>
+            <field name="icono" widget="image"/>
+            <field name="equipo"/>
+            <field name="personajes"/>
 
-    <menuitem name="Ajustes" id="game.menu_1" parent="game.menu_root"/>
+            <templates>
+                <t t-name="kanban-box">
+                    <div class="oe_kanban_card" t-att-style="record.nivel.raw_value > 50 and 'background-color: #ffcccc;' or ''">
+                        <a type="open">
+                            <img class="o_image_64_contain"
+                                 t-att-alt="record.nom_usuario.value"
+                                 t-att-src="kanban_image('game.model_player', 'icono', record.id.raw_value)" />
+                        </a>
+
+                        <div class="oe_kanban_details">
+                            <strong><field name="nom_usuario"/></strong>
+                            <div>Estado: <field name="estado"/></div>
+                            <div>Correo: <field name="correo"/></div>
+                            <div>Nivel: <field name="nivel"/></div>
+                           <!-- <div>Equipo: <field name="equipo.display_name"/></div>-->
+                        </div>
+                    </div>
+                </t>
+            </templates>
+        </kanban>
+    </field>
+</record>
+
+
+
+    <!-- Acciones -->
+
+    <record model="ir.actions.act_window" id="game.action_model_player_window">
+      <field name="name">Usuarios</field>
+      <field name="res_model">game.model_player</field>
+      <field name="view_mode">tree,form,kanban</field>
+    </record>
 
     <!-- Acciones -->
 
     <menuitem name="Usuarios" id="game.menu_model_player" parent="game.menu_1"
-              action="game.action_player_window"/>
- 
+              action="game.action_model_player_window"/>
+
 
   </data>
 </odoo>

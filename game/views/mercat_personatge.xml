@@ -1,0 +1,86 @@
+<odoo>
+  <data>
+ 
+
+    <!-- Acciones -->
+
+    <record model="ir.ui.view" id="game.mercat_personatge_list">
+      <field name="name">game mercat_personatge list</field>
+      <field name="model">game.mercat_personatge</field>
+      <field name="arch" type="xml">
+        <tree>
+            <field name="name"/>
+            <field name="precio"/>
+            <field name="typePersonaje"/>
+            <field name="imagen" widget="image"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="game.mercat_personatge_kanban_view">
+      <field name="name">game.mercat_personatge</field>
+      <field name="model">game.mercat_personatge</field>
+      <field name="arch" type="xml">
+        <kanban>
+            <field name="id"/>
+            <field name="name"/>
+            <field name="precio"/>
+            <field name="typePersonaje"/>
+            <field name="imagen"/>
+            <templates>
+              <t t-name="kanban-box">
+                <div class="oe_product_vignette">
+                  <a type="open">
+                    <img class="oe_kanban_image"
+                      t-att-alt="record.name.value"
+                      t-att-src="kanban_image('game.mercat_personatge', 'imagen', record.id.value)"/>
+                  </a>
+                  <div class="oe_product_desc">
+                    <h4>
+                      <a>
+                        <field name="name"></field>
+                      </a>
+                    </h4>
+                    <h4>
+                        <field name="precio"/>
+                    </h4>
+                    <h4>
+                        <field name="typePersonaje"/>
+                    </h4>
+                  </div>
+                </div>
+              </t>
+            </templates>
+        </kanban>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="game.mercat_personatge_form">
+      <field name="name">game mercat_personatge form</field>
+      <field name="model">game.mercat_personatge</field>
+      <field name="arch" type="xml">
+        <form>
+            <sheet>
+                <group>
+                    <field name="name"/>
+                    <field name="precio"/>
+                    <field name="typePersonaje"/>
+                    <field name="imagen" widget="image"/>
+                </group>
+            </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="game.mercat_personatge_action_window">
+      <field name="name">Mercat Personatge</field>
+      <field name="res_model">game.mercat_personatge</field>
+      <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+    <menuitem name="Mercado Personajes" id="game.menu_mercat_personatge" parent="game.menu_1"
+              action="game.mercat_personatge_action_window"/>
+ 
+
+  </data>
+</odoo>

@@ -1,0 +1,32 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="game.list">
+      <field name="name">game list</field>
+      <field name="model">game.game</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+
+
+
+
+
+    <menuitem name="Game" id="game.menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Pantalla Inicio" id="game.menu_1" parent="game.menu_root"/>
+
+
+  </data>
+</odoo>

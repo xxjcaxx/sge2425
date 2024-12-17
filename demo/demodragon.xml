@@ -1,0 +1,116 @@
+<odoo>
+    <data>
+
+        <record id="type_dragon_mushu" model="game.dragon_type">
+            <field name="name">Mushu</field>
+            <field name="type">1</field>
+            <field name="timeout">100</field>
+            <field name="expGained">1000</field>
+        </record>
+
+        <record id="dragon_mushu_instance" model="game.dragon">
+            <field name="name">Mushu</field>
+            <field name="type" ref="game.type_dragon_mushu"/>
+        </record>
+
+
+
+        <record id="type_dragon_toothless" model="game.dragon_type">
+            <field name="name">Toothless</field>
+            <field name="type">2</field>
+            <field name="timeout">120</field>
+            <field name="expGained">1500</field>
+        </record>
+
+        <record id="dragon_toothless_instance" model="game.dragon">
+            <field name="name">Toothless</field>
+            <field name="type" ref="game.type_dragon_toothless"/>
+        </record>
+
+
+
+        <record id="type_dragon_enderdragon" model="game.dragon_type">
+            <field name="name">EnderDragon</field>
+            <field name="type">3</field>
+            <field name="timeout">200</field>
+            <field name="expGained">3000</field>
+        </record>
+
+         <record id="dragon_enderdragon_instance" model="game.dragon">
+            <field name="name">EnderDragon</field>
+            <field name="type" ref="game.type_dragon_enderdragon"/>
+        </record>
+
+
+
+        <record id="type_dragon_charizard" model="game.dragon_type">
+            <field name="name">Charizard</field>
+            <field name="type">4</field>
+            <field name="timeout">250</field>
+            <field name="expGained">4000</field>
+        </record>
+
+        <record id="dragon_charizard_instance" model="game.dragon">
+            <field name="name">Charizard</field>
+            <field name="type" ref="game.type_dragon_charizard"/>
+        </record>
+
+
+
+        <record id="type_dragon_shenlong" model="game.dragon_type">
+            <field name="name">Shenlong</field>
+            <field name="type">5</field>
+            <field name="timeout">300</field>
+            <field name="expGained">5000</field>
+        </record>
+
+        <record id="dragon_shenlong_instance" model="game.dragon">
+            <field name="name">Shenlong</field>
+            <field name="type" ref="game.type_dragon_shenlong"/>
+        </record>
+
+
+
+        <record id="type_dragon_polunga" model="game.dragon_type">
+            <field name="name">Polunga</field>
+            <field name="type">6</field>
+            <field name="timeout">320</field>
+            <field name="expGained">5500</field>
+        </record>
+
+         <record id="dragon_polunga_instance" model="game.dragon">
+            <field name="name">Polunga</field>
+            <field name="type" ref="game.type_dragon_polunga"/>
+        </record>
+
+
+
+        <record id="type_dragon_smaug" model="game.dragon_type">
+            <field name="name">Smaug</field>
+            <field name="type">7</field>
+            <field name="timeout">400</field>
+            <field name="expGained">6000</field>
+        </record>
+
+        <record id="dragon_smaug_instance" model="game.dragon">
+            <field name="name">Smaug</field>
+            <field name="type" ref="game.type_dragon_smaug"/>
+        </record>
+
+
+
+        <record id="type_dragon_ryujin" model="game.dragon_type">
+            <field name="name">Ryūjin</field>
+            <field name="type">8</field>
+            <field name="timeout">450</field>
+            <field name="expGained">7000</field>
+        </record>
+
+         <record id="dragon_ryujin_instance" model="game.dragon">
+            <field name="name">Ryūjin</field>
+            <field name="type" ref="game.type_dragon_ryujin"/>
+        </record>
+
+
+    </data>
+</odoo>

@@ -1,0 +1,76 @@
+<odoo>
+    <data>
+
+      <record model="ir.ui.view" id="game.game_list">
+          <field name="name">game game list</field>
+          <field name="model">game.game</field>
+          <field name="arch" type="xml">
+              <tree>
+                  <field name="name"/>
+                  <field name="description"/>
+                  <field name="avatar" widget="image"/>
+              </tree>
+          </field>
+      </record>
+
+      <record model="ir.ui.view" id="game.game_form">
+          <field name="name">game game form</field>
+          <field name="model">game.game</field>
+          <field name="arch" type="xml">
+              <form>
+                  <sheet>
+                      <group>
+                          <field name="name"/>
+                          <field name="description"/>
+                          <field name="avatar" widget="image"/>
+                      </group>
+                  </sheet>
+              </form>
+          </field>
+      </record>
+
+      <record model="ir.ui.view" id="game.game_kanban">
+          <field name="name">game game kanban</field>
+          <field name="model">game.game</field>
+          <field name="arch" type="xml">
+              <kanban>
+                  <templates>
+                      <t t-name="kanban-box">
+                          <div class="oe_kanban_card">
+                              <div class="oe_kanban_avatar">
+                                  <img t-att-src="kanban_image('game.game', 'avatar', record.id)" alt="Avatar"/>
+                              </div>
+                              <div class="oe_kanban_details">
+                                  <strong><field name="name"/></strong>
+                                  <div><field name="description"/></div>
+                              </div>
+                          </div>
+                      </t>
+                  </templates>
+              </kanban>
+          </field>
+      </record>
+
+
+
+
+
+      <record model="ir.actions.act_window" id="game.action_game_window">
+          <field name="name">Game</field>
+          <field name="res_model">game.game</field>
+          <field name="view_mode">tree,form</field>
+      </record>
+
+      <record id="game.action_game_window" model="ir.actions.act_window">
+          <field name="view_mode">kanban,tree,form</field>
+      </record>
+
+    <menuitem name="Games" id="game.menu_1"/>
+
+    <menuitem name="Game" id="game.menu_1_list" parent="game.menu_1"
+              action="game.action_game_window"/>
+
+
+
+  </data>
+</odoo>

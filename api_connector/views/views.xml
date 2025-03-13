@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="recuperacion.list">
+      <field name="name">Recuperacion list</field>
+      <field name="model">recuperacion.recuperacion</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="recuperacion.action_window">
+      <field name="name">Recuperacion window</field>
+      <field name="res_model">recuperacion.recuperacion</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="recuperacion.action_server">
+      <field name="name">Recuperacion server</field>
+      <field name="model_id" ref="model_recuperacion_recuperacion"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="Recuperacion" id="recuperacion.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="recuperacion.menu_1" parent="recuperacion.menu_root"/>
+    <menuitem name="Menu 2" id="recuperacion.menu_2" parent="recuperacion.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="recuperacion.menu_1_list" parent="recuperacion.menu_1"
+              action="recuperacion.action_window"/>
+    <menuitem name="Server to list" id="recuperacion" parent="recuperacion.menu_2"
+              action="recuperacion.action_server"/>
+-->
+  </data>
+</odoo>

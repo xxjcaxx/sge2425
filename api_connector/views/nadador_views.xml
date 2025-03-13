@@ -1,0 +1,55 @@
+<odoo>
+    <record id="view_partner_form_recuperacion" model="ir.ui.view">
+        <field name="name">res.partner.form.recuperacion</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/group/group" position="before">
+                <group>
+                    <field name="birth_date"/>
+                    <field name="age"/>
+                    <field name="categoria_id"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_categoria_tree_recuperacion" model="ir.ui.view">
+        <field name="name">recuperacion.categoria.tree</field>
+        <field name="model">recuperacion.categoria</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="min_age"/>
+                <field name="max_age"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_categoria_form_recuperacion" model="ir.ui.view">
+        <field name="name">recuperacion.categoria.form</field>
+        <field name="model">recuperacion.categoria</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="min_age"/>
+                        <field name="max_age"/>
+                    </group>
+                    <group string="Nadadores">
+                        <field name="id" widget="many2many_tags" context="{'default_categoria_id': active_id}" options="{'no_create': True}"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_recuperacion_categoria" model="ir.actions.act_window">
+    <field name="name">Categorías</field>
+    <field name="res_model">recuperacion.categoria</field>
+    <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="recuperacion_categoria_menu" name="Categorías Nadadores" parent="base.menu_custom" action="action_recuperacion_categoria"/>
+</odoo>

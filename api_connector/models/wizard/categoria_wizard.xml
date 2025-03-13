@@ -1,0 +1,19 @@
+<odoo>
+    <record id="view_categoria_wizard_recuperacion" model="ir.ui.view">
+        <field name="name">recuperacion.categoria.wizard</field>
+        <field name="model">recuperacion.categoria.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Crear Categoría">
+                <group>
+                    <field name="name"/>
+                    <field name="min_age"/>
+                    <field name="max_age"/>
+                    <field name="nadador_ids" widget="many2many_tags"/>
+                </group>
+                <footer>
+                    <button string="Crear" type="object" name="action_create_categoria" class="btn-primary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>
